@@ -6,7 +6,7 @@ We will make a game where the user plays RPS (rock paper scissor) against a comp
 
 PseudoCode:
 
-function playRPS(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {
     Compare both selections;
     return result win or lose;
 }
@@ -20,4 +20,8 @@ function getPlayerSelection(user text input){
 function getComputerSelection(){
     randomly generate one of 3 options, RPS;
     return result as computerSelection;
+}
+
+function playGame(playRound) {
+    play 5 rounds in a loop and output the results
 }
