@@ -63,3 +63,13 @@ function getComputerSelection() {
     return computerSelection;
 }
 
+
+// choiceButtons is a node list 
+const choiceButtons = document.querySelectorAll('div.buttonContainer>button')
+
+choiceButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        console.log(button.textContent)
+        alert(button.textContent)
+    })
+})
