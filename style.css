@@ -1,0 +1,31 @@
+body {
+    background-image: url(../../the-odin-project/odin-links-and-images/images/sport-boxing-arena-background-free-vector.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#playerResult, #computerResult {
+    color: white;
+}
+
+.resultContentText {
+    color: red;
+}
+
+.resultsContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.instructions {
+    font-size: 52px;
+    color: yellow;
+    -webkit-text-stroke: 1px black;
+    display: flex;
+    justify-content: center;
+}

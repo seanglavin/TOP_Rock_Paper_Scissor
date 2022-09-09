@@ -9,15 +9,20 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h1 class="instructions">Choose rock, paper, or scissor and then press the Play button!</h1>
-    <input type="text" required>
+    <h1 class="instructions">Choose rock, paper, or scissor!</h1>
+    <!-- <input type="text" required> //text input removed for buttons instead -->
 
-    <button onclick=playRound()>Play</button>
+    <!-- <button onclick=playRound()>Play</button> -->
 
     <div class="buttonContainer">
         <button id="rock">ROCK</button>
         <button id="paper">PAPER</button>
         <button id="scissor">SCISSOR</button>
+    </div>
+
+    <div class="resultsContainer">
+        <h1 id="playerResult">You</h1>
+        <h1 id="computerResult">Computer</h1>
     </div>
 
 </body>

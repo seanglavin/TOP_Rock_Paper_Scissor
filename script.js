@@ -14,15 +14,15 @@ function playRound(playerSelection, computerSelection) {
         return true
     }
     if (playerSelection == "rock" && computerSelection == "paper") {
-        alert(`You lose! ${playerSelection} beats ${computerSelection}`)
+        alert(`You lose! ${playerSelection} loses to ${computerSelection}`)
         return false
     }
     if (playerSelection == "paper" && computerSelection == "scissor") {
-        alert(`You lose! ${playerSelection} beats ${computerSelection}`)
+        alert(`You lose! ${playerSelection} loses to ${computerSelection}`)
         return false
     }
     if (playerSelection == "scissor" && computerSelection == "rock") {
-        alert(`You lose! ${playerSelection} beats ${computerSelection}`)
+        alert(`You lose! ${playerSelection} loses to ${computerSelection}`)
         return false
     }
     if (playerSelection == "rock" && computerSelection == "rock") {
@@ -67,9 +67,30 @@ function getComputerSelection() {
 // choiceButtons is a node list 
 const choiceButtons = document.querySelectorAll('div.buttonContainer>button')
 
+
+
 choiceButtons.forEach((button) => {
     button.addEventListener('click', () => {
-        console.log(button.textContent)
-        alert(button.textContent)
+        playerSelection = button.textContent.toLocaleLowerCase()
+
+        let choices = ["rock","paper","scissor"]
+        computerSelection = choices[Math.floor(Math.random() * choices.length)]
+        playRound(playerSelection, computerSelection)
+        console.log(playerSelection)
+        console.log(computerSelection)
+
+        const playerRoundResults = document.querySelector("#playerResult")
+        const playerResultContent = document.createElement("div")
+        playerResultContent.classList.add("resultContentText")
+        playerResultContent.textContent = `${playerSelection}`
+        playerRoundResults.appendChild(playerResultContent)
+
+        const computerRoundResults = document.querySelector("#computerResult")
+        const computerResultContent = document.createElement("div")
+        computerResultContent.classList.add("resultContentText")
+        computerResultContent.textContent = `${computerSelection}`
+        computerRoundResults.appendChild(computerResultContent)
+
+
     })
 })
