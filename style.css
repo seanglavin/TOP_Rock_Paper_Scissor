@@ -2,30 +2,35 @@ body {
     background-image: url(../../the-odin-project/odin-links-and-images/images/sport-boxing-arena-background-free-vector.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
 }
 
-#playerResult, #computerResult {
+.resultsContainer, .scoreFooterContainer, .buttonContainer, .instructions {
     color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-around;
+    /* margin: 16; */
+    /* border: 16; */
 }
 
-.resultContentText {
+.resultContentText, .winLoseResult, .countContentText{
     color: red;
 }
 
-.resultsContainer {
-    display: flex;
-    justify-content: space-around;
+.scoreFooterContainer {
+    margin-top: auto;
 }
 
 .buttonContainer {
-    display: flex;
     justify-content: center;
+    gap: 8px;
 }
 
 .instructions {
     font-size: 52px;
     color: yellow;
     -webkit-text-stroke: 1px black;
-    display: flex;
     justify-content: center;
 }
